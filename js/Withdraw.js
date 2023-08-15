@@ -8,8 +8,7 @@ document.getElementById("btn-Withdraw").addEventListener("click",function(){
     const WithdrawString = Withdraw.innerText;
     const WithdrawNumber = parseFloat(WithdrawString);
 
-    const CurrentWithdraw = inputNumber + WithdrawNumber;
-    Withdraw.innerText = CurrentWithdraw;
+   
 
 
     const balanceAmmount = document.getElementById("balance-ammount");
@@ -17,12 +16,19 @@ document.getElementById("btn-Withdraw").addEventListener("click",function(){
     const balance = parseFloat(balanceValue);
 
     const newBalance = balance - inputNumber;
-
-    balanceAmmount.innerText = newBalance;
-
-
-
+    if (inputNumber > balance) {
+        alert("Withdrawal amount exceeds balance!");
+        input.value = "";
+        return;
+    } else if (newBalance < 0) {
+        alert("Balance will become negative!");
+        input.value = "";
+    } else {
+        // Update the balance if conditions are met
+        balanceAmmount.innerText = newBalance;
+    }
+    const CurrentWithdraw = inputNumber + WithdrawNumber;
+    Withdraw.innerText = CurrentWithdraw;
+   
     input.value = "";
-
-
 })
