@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- links -->
+    <link rel="stylesheet" href="./tailwind.config.js">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Account</title>
+</head>
+<body>
+    <header class="">
+
+        <h1 class="text-5xl text-center mt-9">The-Money-<span class="font-black  text-blue-500">Drawer.</span></h1>
+    
+    </header>
+
+    <main>
+        <section class="w-8/12 mx-auto">
+       <div class="grid gap-4 lg:grid-cols-3  mt-10 "> 
+                <!-- deposit -->
+        <div class="bg-blue-200  p-8 rounded-xl">
+            <h1 class="text-2xl font-bold">Deposit</h1>
+            <h2 class="text-4xl">$<span id="deposit-ammount" >00</span></h2>
+        </div>
+                        <!-- Withdraw -->
+        <div class="bg-gray-300  p-8 rounded-xl">
+            <h1 class="text-2xl font-bold">Withdraw</h1>
+            <h2 class="text-4xl">$<span id="width-ammount">00</span></h2>
+        </div>
+                        <!-- Balance -->
+        <div class="bg-orange-300  p-8 rounded-xl">
+            <h1 class="text-2xl font-bold">Balance</h1>
+            
+            <h2 class="text-4xl">$<span id="balance-ammount">100</span></h2>
+        </div>
+
+       </div>
+    </section>
+
+    <!-- second section -->
+    <section class="w-8/12 mx-auto">
+        <div class="grid gap-4 lg:grid-cols-2 grid-rows-1 ">
+            <!-- Deposit section -->
+            <section class=" bg-purple-200 mt-20 p-6 rounded-lg">
+                <h1 class="text-2xl font-bold mb-6">Please Deposit </h1>
+        
+                <input  class=" block mb-3 w-3/5 p-1 px-2 rounded-lg" type="number" name="" id="Deposit" placeholder="00$">
+        
+                <button id="btn-Deposit" class="bg-purple-400 rounded-lg px-3 py-1 hover:bg-purple-500 font-medium">Deposit</button>
+            </section>
+                <!-- Withdraw section -->
+            <section class=" bg-purple-200 mt-20 p-6 rounded-lg">
+                <h1 class="text-2xl font-bold mb-6">Please Withdraw </h1>
+        
+                <input  class=" block mb-3 w-3/5 p-1 px-2 rounded-lg" type="number" name="" id="Withdraw" placeholder="00$">
+        
+                <button id="btn-Withdraw" class="bg-purple-400 rounded-lg px-3 py-1 hover:bg-purple-500 font-medium">Withdraw</button>
+            </section>
+        
+
+        </div>
+
+    </section>
+    </main>
+    <script src="./js/bank.js"></script>
+    <script src="./js/Withdraw.js"></script>
+</body>
+</html>
