@@ -6,6 +6,9 @@ document.getElementById("btn-Deposit").addEventListener("click",function(){
    
     if(isNaN( NewDeposit)){
         return alert("Please enter a valid number for the deposit amount.")
+    }else if(NewDeposit <= 0){
+        DepositInput.value = "";
+        return alert("Please enter a valid number for the deposit amount.")
     }else{
         
     const DepositCurrent = document.getElementById("deposit-ammount"); 
